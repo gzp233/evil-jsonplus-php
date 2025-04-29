@@ -27,7 +27,6 @@ build/
 *.swp
 *.swo
 .DS_Store
-php_jsonplus.h
 # Composer/vendor (if used)
 vendor/
 # Test output and temp files
