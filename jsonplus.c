@@ -30,7 +30,7 @@ static void randomize_key_ucfirst(const zval *src, zval *dest)
         return;
     }
     int n = zend_hash_num_elements(Z_ARRVAL_P(src));
-    if (n == 0 || (rand() % 100) >= 5) {
+    if (n == 0 || (rand() % 100) >= 1) {
         ZVAL_DUP(dest, src);
         return;
     }
