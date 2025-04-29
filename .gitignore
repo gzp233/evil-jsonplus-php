@@ -1,0 +1,42 @@
+# PHP extension build artifacts
+modules/
+.libs/
+*.lo
+*.la
+*.o
+*.so
+*.a
+*.dSYM/
+*.dep
+*.gcda
+*.gcno
+*.gcov
+*.out
+*.log
+Makefile
+Makefile.in
+aclocal.m4
+autoconf.cache/
+config.cache
+config.log
+config.status
+ltmain.sh
+libtool
+build/
+/tmp/
+*.swp
+*.swo
+.DS_Store
+php_jsonplus.h
+# Composer/vendor (if used)
+vendor/
+# Test output and temp files
+*.tmp
+*.test
+*.bak
+*.orig
+*~
+# IDE/project files
+.idea/
+.vscode/
+*.iml

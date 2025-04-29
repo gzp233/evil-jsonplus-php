@@ -1,0 +1,9 @@
+-include jsonplus.dep
+jsonplus.lo: /Users/ou/code/mine/ev_code/jsonplus/jsonplus.c
+	$(LIBTOOL) --mode=compile $(CC) -I. -I/Users/ou/code/mine/ev_code/jsonplus $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS)   -DZEND_COMPILE_DL_EXT=1 -c /Users/ou/code/mine/ev_code/jsonplus/jsonplus.c -o jsonplus.lo  -MMD -MF jsonplus.dep -MT jsonplus.lo
+$(phplibdir)/jsonplus.la: ./jsonplus.la
+	$(LIBTOOL) --mode=install cp ./jsonplus.la $(phplibdir)
+
+./jsonplus.la: $(shared_objects_jsonplus) $(JSONPLUS_SHARED_DEPENDENCIES)
+	$(LIBTOOL) --mode=link $(CC) -shared $(COMMON_FLAGS) $(CFLAGS_CLEAN) $(EXTRA_CFLAGS) $(LDFLAGS)  -o $@ -export-dynamic -avoid-version -prefer-pic -module -rpath $(phplibdir) $(EXTRA_LDFLAGS) $(shared_objects_jsonplus) $(JSONPLUS_SHARED_LIBADD)
+
